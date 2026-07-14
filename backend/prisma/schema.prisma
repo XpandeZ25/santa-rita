@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model PreInscripcion {
+  id             Int      @id @default(autoincrement())
+  nombreApellido String
+  numeroCelular  String
+  carrera        String
+  turno          String
+  horaContacto   String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model ImagenPagina {
+  id          Int      @id @default(autoincrement())
+  key         String   @unique
+  titulo      String?
+  descripcion String?
+  url         String
+  publicId    String?
+  storage     String   @default("local")
+  posicion    Int      @default(0)
+  activo      Boolean  @default(true)
+  seccion     String   @default("slider")
+  pesoByte    Int?
+  dimensiones String?
+  formato     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
