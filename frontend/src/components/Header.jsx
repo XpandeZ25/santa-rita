@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { GraduationCap, Home, Images, MessageCircle, Users } from "lucide-react";
+import { BookOpen, GraduationCap, Home, Images, MessageCircle, Users } from "lucide-react";
 import logo from "../assets/logo-santa-rita.webp";
 import ImagenSistema from "./ImagenSistema.jsx";
 import { NavBar } from "./ui/tubelight-navbar.jsx";
@@ -8,6 +8,7 @@ const navItems = [
   { name: "Inicio", url: "#inicio", icon: Home },
   { name: "Nosotros", url: "#nosotros", icon: Users },
   { name: "Carrera", url: "#oferta", icon: GraduationCap },
+  { name: "Malla", url: "#malla", icon: BookOpen },
   { name: "Instalaciones", url: "#instalaciones", icon: Images },
   { name: "Contacto", url: "#contacto", icon: MessageCircle }
 ];

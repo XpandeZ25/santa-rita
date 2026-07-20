@@ -57,7 +57,7 @@ export default function Footer() {
         </div>
 
         <div className="creator-bar">
-          Pagina creada por <strong>XpandeZ</strong>
+          Pagina desarrollada por <strong>XpandeZ</strong>
         </div>
       </footer>
 
