@@ -21,7 +21,7 @@ export default function Footer() {
           <div className="footer-social-block">
             <h3>Siguenos</h3>
             <div className="social-links">
-              <a className="social-link facebook" href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook">f</a>
+              <a className="social-link facebook" href="https://www.facebook.com/profile.php?id=61590827580630&rdid=sSV6PCP3XyhEwFFX&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14jDqKmHvxJ%2F" target="_blank" rel="noreferrer" aria-label="Facebook">f</a>
               <a className="social-link youtube" href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube">▶</a>
               <a className="social-link instagram" href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram">◎</a>
             </div>
