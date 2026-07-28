@@ -8,7 +8,7 @@ const navItems = [
   { name: "Inicio", url: "#inicio", icon: Home },
   { name: "Nosotros", url: "#nosotros", icon: Users },
   { name: "Carrera", url: "#oferta", icon: GraduationCap },
-  { name: "Malla", url: "#malla", icon: BookOpen },
+  { name: "Malla curricular", url: "#malla", icon: BookOpen },
   { name: "Instalaciones", url: "#instalaciones", icon: Images },
   { name: "Contacto", url: "#contacto", icon: MessageCircle }
 ];

@@ -115,15 +115,15 @@ export default function App() {
           mediaType="image"
           mediaSrc={heroImage}
           bgImageSrc={heroImage}
-          title={'INSTITUTO TECNICO EN SALUD "SANTA RITA" SRL'}
+          title={'INSTITUTO TECNICO EN SALUD "SANTA RITA" S.R.L.'}
           date="Instituto Santa Rita"
           scrollToExpand="Desliza para descubrir la carrera"
           className="santa-intro"
         >
           <div className="intro-copy">
-            <p>Mas de 25 anos formando profesionales de la salud en Bolivia, con excelencia tecnica, practica clinica y vocacion de servicio.</p>
+            <p>Más de 25 años formando profesionales de la salud en Bolivia, con excelencia técnica, práctica clínica y vocación de servicio.</p>
             <div className="hero-actions">
-              <Link className="btn primary" to="/preinscripcion">Inscribete ahora</Link>
+              <Link className="btn primary" to="/preinscripcion">Inscríbete ahora</Link>
               <a className="btn ghost" href="#oferta">Conoce nuestra oferta</a>
             </div>
           </div>
@@ -133,33 +133,30 @@ export default function App() {
           <div className="copy-block">
             <span className="eyebrow">Trayectoria y compromiso</span>
             <h2>¿Quiénes somos?</h2>
-            <p>Fundado en 1998, el Instituto Santa Rita ha consolidado su prestigio a través de décadas de dedicación a la formación de cuadros técnicos en salud. Bajo la Resolución Ministerial R.M. N° 085/2023, operamos con plena legalidad y compromiso académico.</p>
+            <p>Fundado en 1998, el Instituto Santa Rita ha consolidado su prestigio a través de décadas de dedicación a la formación de cuadros técnicos en salud. Bajo la Resolución Ministerial R.M. N° 290/1999, operamos con plena legalidad y compromiso académico.</p>
             <article className="info-note">
               <h3>Misión</h3>
-              <p>Formar Técnicos Medios en Enfermería con alta competencia científica, técnica y profunda vocación de servicio humano, capaces de responder a los retos del sistema nacional de salud.</p>
+              <p>Contribuir al Desarrollo de los Bachilleres del departamento de La Paz, ofertando la oportunidad de Formación de Técnicos Medios en Enfermería, orientando a la excelencia académica y el desarrollo de las competencias laborales en el área de salud acordes a los avances científicos – tecnológicos y el modelo SAFCI, con un valor agregado de generar en los docentes y estudiantes principios de disciplina humanización del servicio y responsabilidad social sostenible.</p>
             </article>
             <article className="info-note">
               <h3>Visión</h3>
-              <p>Ser la institución líder y referente en Bolivia en la formación de profesionales técnicos de salud, reconocida por la excelencia académica y los valores éticos de sus egresados.</p>
+              <p>Constituirse a ser un referente educativo, modelo de organización dinámica e innovadora, en base a un proceso de gestión que coordine e implique a todos los participantes con un sentido académico e Institucional, que cumpla con los estándares de excelencia académica y de gestión con presencia a nivel local y departamental, dirigida a la formación integral de profesionales Técnicos Medios en Enfermería.</p>
             </article>
             <article className="info-note resolutions-note">
               <h3>Resoluciones institucionales</h3>
               <div className="resolution-list" aria-label="Resoluciones institucionales por año">
-                <span>1999 · R.M. 290/99</span>
-                <span>2008 · R.M. 933/08</span>
-                <span>2010 · R.M. 530/2010</span>
-                <span>2014 · R.M. 124/2014</span>
-                <span>2014 · R.M. 975/2014</span>
-                <span>2015 · R.A. 155/2015</span>
-                <span>2017 · R.M. 2485/2017</span>
-                <span>2019 · R.M. 0565/2019</span>
-                <span>2020 · R.A. 0001/2020</span>
-                <span>2023 · R.M. 0880/2023</span>
+                <span>R.M. 290/1999 (20/08/1998)</span>
+                <span>R.M. 933/2008 (07/11/2008)</span>
+                <span>R.M. 124/2014 (24/02/2014)</span>
+                <span>R.M. 976/2014 (10/12/2014)</span>
+                <span>R.M. 2485/2017 (21/08/2017)</span>
+                <span>R.A. 0001/2020 (27/01/2020)</span>
+                <span>R.M. 0880/2023 (09/10/2023)</span>
               </div>
             </article>
           </div>
           <div className="image-stack">
-            <img src={aboutStudentsImage} alt="Estudiantes de enfermeria del Instituto Santa Rita en sala de practica clinica" />
+            <img src={aboutStudentsImage} alt="Estudiantes de enfermería del Instituto Santa Rita en sala de práctica clínica" />
             <div className="stat-card">
               <strong>25+</strong>
               <span>Años educando</span>
@@ -175,7 +172,7 @@ export default function App() {
           <div className="academic-grid">
             <div className="program-table">
               <div className="table-head"><span>Artículo</span><span>Detalle del Programa</span></div>
-              <div className="table-row"><span>Carrera</span><strong>Técnico en Enfermería</strong></div>
+              <div className="table-row"><span>Carrera</span><strong>Enfermería</strong></div>
               <div className="table-row"><span>Nivel</span><strong>Técnico Medio</strong></div>
               <div className="table-row"><span>Duración</span><strong>2 años (anual)</strong></div>
               <div className="table-row"><span>Modalidad</span><strong>70% presencial y 30% teórico</strong></div>
@@ -202,11 +199,11 @@ export default function App() {
             <h2>Prácticas y Convenios</h2>
             <p>Garantizamos tu formación práctica mediante alianzas estratégicas con las instituciones de salud más importantes del país.</p>
             <div className="chips">
-              <span>Hospital Municipal Cotahuma</span>
-              <span>Hospital Municipal La Paz</span>
-              <span>Hospital Arco Iris</span>
-              <span>Hospital del Tórax</span>
+              <span>Hospital Municipal La Portada</span>
+              <span>Hospital Arco Iris S.R.L.</span>
               <span>Hospital de la Mujer</span>
+              <span>Hospital Municipal La Paz</span>
+              <span>Instituto Nacional de Tórax</span>
             </div>
           </div>
           <CarruselConvenios />
@@ -218,7 +215,7 @@ export default function App() {
             <p>Cumplimos con todos los estándares nacionales para tu formación profesional.</p>
             <div className="legal-grid">
               <article><span className="line-icon">✓</span><h3>Ministerio de Educación</h3><p>Instituto legalmente reconocido por el Estado Plurinacional de Bolivia.</p></article>
-              <article><span className="line-icon">§</span><h3>Resolución Ministerial</h3><p>R.M. N° 085/2023. Asegurando excelencia académica y legal.</p></article>
+              <article><span className="line-icon">§</span><h3>Resolución Ministerial</h3><p>R.M. N° 290/1999. Asegurando excelencia académica y legal.</p></article>
               <article><span className="line-icon">▣</span><h3>Títulos Oficiales</h3><p>Validez nacional para el ejercicio profesional inmediato.</p></article>
             </div>
           </div>
@@ -230,10 +227,10 @@ export default function App() {
             <p>Ambientes modernos equipados para la enseñanza médica.</p>
           </div>
           <div className="gallery">
-            <img className="tall" src={instalacionSalaPractica} alt="Sala de practica clinica con estudiantes de enfermeria" />
-            <img src={instalacionAulaAnatomia} alt="Clase de anatomia con estudiantes del Instituto Santa Rita" />
-            <img src={instalacionConsultaExterna} alt="Ambiente de consulta externa para practicas de enfermeria" />
-            <img className="wide gallery-contain" src={instalacionEvaluacion} alt="Evaluacion academica con estudiantes del Instituto Santa Rita" />
+            <img className="tall" src={instalacionSalaPractica} alt="Sala de práctica clínica con estudiantes de enfermería" />
+            <img src={instalacionAulaAnatomia} alt="Clase de anatomía con estudiantes del Instituto Santa Rita" />
+            <img src={instalacionConsultaExterna} alt="Ambiente de consulta externa para prácticas de enfermería" />
+            <img className="wide gallery-contain" src={instalacionEvaluacion} alt="Evaluación académica con estudiantes del Instituto Santa Rita" />
           </div>
         </motion.section>
 
@@ -246,37 +243,37 @@ export default function App() {
           <div className="testimonial-grid">
             <article>
               <div className="stars" aria-label="5 estrellas">★★★★★</div>
-              <p>"Al principio tenia miedo de no poder, pero en las practicas los licenciados te van guiando paso a paso. Eso me ayudo mucho a agarrar confianza."</p>
+              <p>"Al principio tenía miedo de no poder, pero en las prácticas los licenciados te van guiando paso a paso. Eso me ayudó mucho a agarrar confianza."</p>
               <strong>Maria F.</strong>
               <span>Primer año</span>
             </article>
             <article>
               <div className="stars" aria-label="5 estrellas">★★★★★</div>
-              <p>"Me gusta que no todo se queda en teoria. Practicamos, preguntamos, nos corrigen y poco a poco uno se siente mas preparado para atender bien."</p>
+              <p>"Me gusta que no todo se queda en teoría. Practicamos, preguntamos, nos corrigen y poco a poco uno se siente más preparado para atender bien."</p>
               <strong>Jose L.</strong>
               <span>Segundo año</span>
             </article>
             <article>
               <div className="stars" aria-label="5 estrellas">★★★★★</div>
-              <p>"Lo que mas valoro es el ambiente. Hay exigencia, si, pero tambien apoyo. Si uno pone de su parte, aqui aprende de verdad."</p>
+              <p>"Lo que más valoro es el ambiente. Hay exigencia, sí, pero también apoyo. Si uno pone de su parte, aquí aprende de verdad."</p>
               <strong>Daniela R.</strong>
-              <span>Estudiante en practicas</span>
+              <span>Estudiante en prácticas</span>
             </article>
             <article>
               <div className="stars" aria-label="5 estrellas">★★★★★</div>
-              <p>"Entre por recomendacion de una amiga y me quede tranquila. Me explicaron horarios, requisitos y siempre hay alguien que te orienta."</p>
+              <p>"Entré por recomendación de una amiga y me quedé tranquila. Me explicaron horarios, requisitos y siempre hay alguien que te orienta."</p>
               <strong>Camila S.</strong>
               <span>Turno tarde</span>
             </article>
             <article>
               <div className="stars" aria-label="5 estrellas">★★★★★</div>
-              <p>"Las clases de primeros auxilios me gustaron bastante porque hacemos casos y simulaciones. Ahi uno entiende para que sirve cada procedimiento."</p>
+              <p>"Las clases de primeros auxilios me gustaron bastante porque hacemos casos y simulaciones. Ahí uno entiende para qué sirve cada procedimiento."</p>
               <strong>Kevin M.</strong>
               <span>Estudiante</span>
             </article>
             <article>
               <div className="stars" aria-label="5 estrellas">★★★★★</div>
-              <p>"Yo buscaba estudiar algo que me permita ayudar a mi familia y trabajar en salud. Santa Rita me dio ese empujon para empezar."</p>
+              <p>"Yo buscaba estudiar algo que me permita ayudar a mi familia y trabajar en salud. Santa Rita me dio ese empujón para empezar."</p>
               <strong>Rocio V.</strong>
               <span>Turno noche</span>
             </article>
@@ -289,7 +286,7 @@ export default function App() {
             <p>Nuestra asesora académica Rita está disponible para ayudarte con información sobre requisitos, costos y horarios.</p>
             <div className="mini-list">
               <span>Atención personalizada inmediata</span>
-              <span>Horarios de oficina: 08:00 - 21:00</span>
+              <span>Horarios de oficina: 08:30 a 12:30 y 14:30 a 21:00</span>
             </div>
           </div>
           <div className="support-visual">
@@ -324,8 +321,8 @@ export default function App() {
         <motion.section className="section final-video" {...entranceProps}>
           <div className="final-video-copy">
             <span className="eyebrow">Vive la experiencia Santa Rita</span>
-            <h2>Conoce de cerca nuestra formacion</h2>
-            <p>Un vistazo real al ambiente academico, la energia de nuestros estudiantes y el camino profesional que puedes comenzar aqui.</p>
+            <h2>Conoce de cerca nuestra formación</h2>
+            <p>Un vistazo real al ambiente académico, la energía de nuestros estudiantes y el camino profesional que puedes comenzar aquí.</p>
             <Link className="btn primary" to="/preinscripcion">Quiero pre-inscribirme</Link>
           </div>
           <div className="final-video-frame">

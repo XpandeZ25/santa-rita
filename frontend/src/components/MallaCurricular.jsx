@@ -1,21 +1,21 @@
 import { BookOpen, Clock } from "lucide-react";
 
 const mallaModules = [
-  { code: "PSB-101", name: "Proceso de Salud en Bolivia", year: "Primer ano", competences: 4, hours: 80, days: 16 },
-  { code: "PAU-102", name: "Primeros Auxilios", year: "Primer ano", competences: 5, hours: 170, days: 34 },
-  { code: "ECS-103", name: "Promocion de la Salud", year: "Primer ano", competences: 3, hours: 80, days: 16 },
-  { code: "TPB-104", name: "Tecnicas y Procedimientos Basicos en Enfermeria", year: "Primer ano", competences: 5, hours: 300, days: 60 },
-  { code: "SSR-105", name: "Salud Sexual y Reproductiva", year: "Primer ano", competences: 6, hours: 280, days: 56 },
-  { code: "AIM-106", name: "Atencion al Menor de 5 Anos y Edad Escolar", year: "Primer ano", competences: 4, hours: 290, days: 58 },
-  { code: "SAB-201", name: "Saneamiento Basico", year: "Segundo ano", competences: 4, hours: 160, days: 32 },
-  { code: "VIG-202", name: "Vigilancia Epidemiologica", year: "Segundo ano", competences: 4, hours: 160, days: 32 },
-  { code: "MTR-203", name: "Medicina Tradicional", year: "Segundo ano", competences: 3, hours: 80, days: 16 },
-  { code: "IAP-204", name: "Investigacion de Accion Participativa y Operativa", year: "Segundo ano", competences: 3, hours: 160, days: 32 },
-  { code: "PPP-205", name: "Practica Pre Profesional en Establecimientos Urbanos y Rurales", year: "Segundo ano", competences: 0, hours: 640, days: null }
+  { code: "PSB-101", name: "Proceso de Salud en Bolivia", year: "Primer año", competences: 4, hours: 80, days: 16 },
+  { code: "PAU-102", name: "Primeros Auxilios", year: "Primer año", competences: 5, hours: 170, days: 34 },
+  { code: "ECS-103", name: "Promoción de la Salud", year: "Primer año", competences: 3, hours: 80, days: 16 },
+  { code: "TPB-104", name: "Técnicas y Procedimientos Básicos en Enfermería", year: "Primer año", competences: 5, hours: 300, days: 60 },
+  { code: "SSR-105", name: "Salud Sexual y Reproductiva", year: "Primer año", competences: 6, hours: 280, days: 56 },
+  { code: "AIM-106", name: "Atención al Menor de 5 Años y Edad Escolar", year: "Primer año", competences: 4, hours: 290, days: 58 },
+  { code: "SAB-201", name: "Saneamiento Básico", year: "Segundo año", competences: 4, hours: 160, days: 32 },
+  { code: "VIG-202", name: "Vigilancia Epidemiológica", year: "Segundo año", competences: 4, hours: 160, days: 32 },
+  { code: "MTR-203", name: "Medicina Tradicional", year: "Segundo año", competences: 3, hours: 80, days: 16 },
+  { code: "IAP-204", name: "Investigación de Acción Participativa y Operativa", year: "Segundo año", competences: 3, hours: 160, days: 32 },
+  { code: "PPP-205", name: "Práctica Pre Profesional en Establecimientos Urbanos y Rurales", year: "Segundo año", competences: 0, hours: 640, days: null }
 ];
 
 const competenceLabels = {
-  0: "Practica integradora",
+  0: "Práctica integradora",
   3: "3 competencias",
   4: "4 competencias",
   5: "5 competencias",
@@ -32,7 +32,7 @@ export default function MallaCurricular() {
         <div>
           <span className="eyebrow">Plan de estudios</span>
           <h2>Malla curricular</h2>
-          <p>Una vista clara del plan de estudios: modulos, competencias, horas academicas y duracion estimada.</p>
+          <p>Una vista clara del plan de estudios: módulos, competencias, horas académicas y duración estimada.</p>
         </div>
         <div className="curriculum-total">
           <BookOpen size={22} />
@@ -44,8 +44,8 @@ export default function MallaCurricular() {
       <div className="curriculum-table-card">
         <div className="curriculum-table-intro">
           <div>
-            <strong>Distribucion academica</strong>
-            <span>{practicalHours} horas de practica pre profesional incluidas en el plan.</span>
+            <strong>Distribución académica</strong>
+            <span>{practicalHours} horas de práctica pre profesional incluidas en el plan.</span>
           </div>
           <Clock size={22} aria-hidden="true" />
         </div>
@@ -54,20 +54,20 @@ export default function MallaCurricular() {
           <table className="curriculum-table">
             <thead>
               <tr>
-                <th>Ano</th>
-                <th>Codigo</th>
-                <th>Modulo</th>
+                <th>Año</th>
+                <th>Código</th>
+                <th>Módulo</th>
                 <th>Competencias</th>
                 <th>Horas</th>
-                <th>Dias</th>
+                <th>Días</th>
               </tr>
             </thead>
             <tbody>
               {mallaModules.map((module) => (
                 <tr key={module.code}>
-                  <td data-label="Ano"><span className="curriculum-year">{module.year}</span></td>
-                  <td data-label="Codigo"><span className="curriculum-code">{module.code}</span></td>
-                  <td data-label="Modulo">
+                  <td data-label="Año"><span className="curriculum-year">{module.year}</span></td>
+                  <td data-label="Código"><span className="curriculum-code">{module.code}</span></td>
+                  <td data-label="Módulo">
                     <strong className="curriculum-module-name">{module.name}</strong>
                     <div className="curriculum-progress" aria-hidden="true">
                       <span style={{ width: `${Math.max(10, (module.hours / maxHours) * 100)}%` }} />
@@ -75,7 +75,7 @@ export default function MallaCurricular() {
                   </td>
                   <td data-label="Competencias">{competenceLabels[module.competences]}</td>
                   <td data-label="Horas"><strong>{module.hours} h</strong></td>
-                  <td data-label="Dias">{module.days ? `${module.days} dias` : "Practica intensiva"}</td>
+                  <td data-label="Días">{module.days ? `${module.days} días` : "Práctica intensiva"}</td>
                 </tr>
               ))}
             </tbody>

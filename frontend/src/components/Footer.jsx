@@ -8,14 +8,14 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand-block">
             <ImagenSistema imageKey="footer_logo" className="footer-logo" fallback={logo} alt="Santa Rita" />
-            <p>Lideres en formacion de personal de enfermeria con valores eticos y excelencia tecnica en Bolivia.</p>
+            <p>Líderes en formación de personal de enfermería con valores éticos y excelencia técnica en Bolivia.</p>
           </div>
 
           <div className="footer-contact-block">
-            <h3>Nuestra Direccion</h3>
-            <p><strong>Telefono:</strong> +591 2 2442164 - 2442204</p>
+            <h3>Nuestra Dirección</h3>
+            <p><strong>Teléfonos:</strong> 23112062 - 2334302 - 72004647 - 64155020</p>
             <p><strong>Correo:</strong> info@santarita.edu.bo</p>
-            <p><strong>Direccion:</strong> Av. Villazon N 1578, Edificio Florida, Sopocachi, La Paz</p>
+            <p><strong>Dirección:</strong> Av. Villazón N° 1970, Edif. Roman, 1er. y 2do. Piso (Frente UMSA)</p>
           </div>
 
           <div className="footer-social-block">
@@ -27,8 +27,8 @@ export default function Footer() {
             </div>
             <nav className="footer-mini-nav" aria-label="Enlaces del footer">
               <a href="/#nosotros">Sobre Nosotros</a>
-              <a href="/#oferta">Oferta Academica</a>
-              <a href="/preinscripcion">Preinscripcion</a>
+              <a href="/#oferta">Oferta Académica</a>
+              <a href="/preinscripcion">Preinscripción</a>
             </nav>
           </div>
 
@@ -51,19 +51,19 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <a href="/#contacto">Politica de privacidad</a>
+          <a href="/#contacto">Política de privacidad</a>
           <a href="/#contacto">Aviso Legal</a>
           <a href="/#contacto">Cookies</a>
         </div>
 
         <div className="creator-bar">
-          Pagina desarrollada por <strong>XpandeZ</strong>
+          Página desarrollada por <strong>XpandeZ</strong>
         </div>
       </footer>
 
       <a
         className="whatsapp-float"
-        href="https://wa.me/59162708056?text=Hola%2C%20quiero%20informacion%20sobre%20el%20Instituto%20Santa%20Rita"
+        href="https://wa.me/59172004647?text=Hola%2C%20quiero%20informacion%20sobre%20el%20Instituto%20Santa%20Rita"
         target="_blank"
         rel="noreferrer"
         aria-label="Contactar por WhatsApp"
