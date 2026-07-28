@@ -65,13 +65,13 @@ export default function CarruselConvenios() {
   }, [isHovered]);
 
   return (
-    <div 
+    <div
       className="convenios-carousel-wrapper"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="convenios-carousel-track-container">
-        <div 
+        <div
           className="convenios-carousel-track"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
@@ -88,15 +88,15 @@ export default function CarruselConvenios() {
       </div>
 
       {/* Flechas */}
-      <button 
-        className="convenios-carousel-btn prev" 
+      <button
+        className="convenios-carousel-btn prev"
         onClick={prevSlide}
         aria-label="Imagen anterior"
       >
         <ChevronLeft size={24} />
       </button>
-      <button 
-        className="convenios-carousel-btn next" 
+      <button
+        className="convenios-carousel-btn next"
         onClick={nextSlide}
         aria-label="Siguiente imagen"
       >

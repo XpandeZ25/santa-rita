@@ -2176,3 +2176,167 @@ th { color: #40506a; background: #f7fafc; }
   }
 }
 
+/* ==========================================================================
+   NUESTROS RECONOCIMIENTOS (RECOGNITIONS) SECTION
+   ========================================================================== */
+.recognitions {
+  background: linear-gradient(180deg, var(--white) 0%, rgba(244, 247, 251, 0.72) 100%);
+  color: var(--ink);
+  padding: clamp(64px, 8vw, 92px) 8vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.recognitions-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.recognitions-intro {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+
+.recognitions-intro-main p.highlight-lead {
+  font-size: clamp(16px, 1.25vw, 18px);
+  color: var(--ink);
+  font-weight: 500;
+  line-height: 1.65;
+  border-left: 3px solid #c43d4b; /* Red accent border to match certificate */
+  padding-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.recognitions-intro-main p.highlight-quote {
+  font-style: italic;
+  font-size: clamp(14px, 1.15vw, 16px);
+  color: var(--teal-dark);
+  background: rgba(0, 121, 140, 0.05);
+  padding: 16px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 121, 140, 0.12);
+  margin: 0;
+}
+
+.recognitions-intro-side p {
+  color: var(--muted);
+  font-size: clamp(14px, 1.15vw, 16px);
+  line-height: 1.72;
+  margin: 0 0 20px;
+}
+
+.recognitions-intro-side p:last-child {
+  margin-bottom: 0;
+}
+
+.recognitions-gallery {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1fr;
+  grid-template-rows: clamp(160px, 17vw, 210px) clamp(260px, 28vw, 390px);
+  gap: 16px;
+}
+
+.recognitions-gallery .gallery-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.recognitions-gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+/* Hover effects */
+.recognitions-gallery .gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(17, 31, 56, 0.18);
+  border-color: var(--teal);
+  z-index: 2;
+}
+
+.recognitions-gallery .gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.recognitions-gallery .tall {
+  grid-row: span 2;
+}
+
+.recognitions-gallery .wide {
+  grid-column: span 2;
+}
+
+/* Highlight the main red certificate image */
+.recognitions-gallery .gallery-item.main-recognition {
+  border: 2px solid rgba(196, 61, 75, 0.6); /* Red highlight border */
+  box-shadow: 
+    0 18px 45px rgba(17, 31, 56, 0.16),
+    0 0 30px rgba(196, 61, 75, 0.25); /* Red soft glow */
+}
+
+.recognitions-gallery .gallery-item.main-recognition:hover {
+  border-color: rgba(196, 61, 75, 0.9);
+  box-shadow: 
+    0 24px 50px rgba(17, 31, 56, 0.22),
+    0 0 45px rgba(196, 61, 75, 0.45); /* Stronger red glow */
+}
+
+.recognitions-gallery .gallery-item.main-recognition .badge-featured {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #c43d4b;
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 6px 14px;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+.recognitions-gallery .delivery-photo img {
+  object-position: center 10%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .recognitions-intro {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+  .recognitions-gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: clamp(210px, 34vw, 320px);
+  }
+  .recognitions-gallery .tall, .recognitions-gallery .wide {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .recognitions-gallery {
+    grid-template-rows: none;
+    grid-auto-rows: 260px;
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -16,6 +16,10 @@ import ritaImage from "../assets/rita-asesora.webp";
 import santaRitaVideo from "../assets/santa-rita-video.mp4";
 import ImagenSistema from "../components/ImagenSistema.jsx";
 import CarruselConvenios from "../components/CarruselConvenios.jsx";
+import reconocimiento1 from "../assets/reconocimiento-1.jpg";
+import reconocimiento2 from "../assets/reconocimiento-2.jpg";
+import reconocimiento3 from "../assets/reconocimiento-3.jpg";
+import reconocimiento4 from "../assets/reconocimiento-4.jpg";
 import { GradientBackground } from "../components/ui/gradient-backgrounds.jsx";
 import ScrollExpandMedia from "../components/ui/scroll-expansion-hero.jsx";
 
@@ -175,7 +179,7 @@ export default function App() {
               <div className="table-row"><span>Carrera</span><strong>Enfermería</strong></div>
               <div className="table-row"><span>Nivel</span><strong>Técnico Medio</strong></div>
               <div className="table-row"><span>Duración</span><strong>2 años (anual)</strong></div>
-              <div className="table-row"><span>Modalidad</span><strong>70% presencial y 30% teórico</strong></div>
+              <div className="table-row"><span>Modalidad</span><strong>70% práctico y 30% teórico</strong></div>
               <div className="table-row"><span>Carga Horaria</span><strong>2.400 horas académicas</strong></div>
             </div>
             <aside className="profile-card">
@@ -277,6 +281,50 @@ export default function App() {
               <strong>Rocio V.</strong>
               <span>Turno noche</span>
             </article>
+          </div>
+        </motion.section>
+
+        <motion.section className="section recognitions" id="reconocimientos" {...entranceProps}>
+          <div className="recognitions-container">
+            <div className="section-title-left">
+              <span className="eyebrow">Nuestros Reconocimientos</span>
+              <h2>Gobierno Autónomo Departamental de La Paz – SEDES La Paz</h2>
+            </div>
+            
+            <div className="recognitions-intro">
+              <div className="recognitions-intro-main">
+                <p className="highlight-lead">
+                  El Instituto Santa Rita ha sido distinguido con un reconocimiento oficial otorgado por el Gobierno Autónomo Departamental de La Paz, a través del Servicio Departamental de Salud (SEDES) y la Secretaría Departamental de Salud, por su alto profesionalismo y su invaluable aporte al Programa Departamental de Lucha contra el Cáncer.
+                </p>
+                <p className="highlight-quote">
+                  El Instituto Santa Rita reafirma su misión de formar profesionales íntegros, comprometidos con el bienestar de la comunidad y con la construcción de un futuro más saludable para todos.
+                </p>
+              </div>
+              <div className="recognitions-intro-side">
+                <p>
+                  Este reconocimiento resalta el compromiso del Instituto con la mejora de la calidad de vida de los pacientes, su humanidad y su dedicación constante al fortalecimiento del sistema de salud en el departamento.
+                </p>
+                <p>
+                  Durante la ceremonia, las autoridades destacaron la labor del Instituto Santa Rita como ejemplo de excelencia académica, ética profesional y responsabilidad social, pilares que contribuyen al desarrollo humano y sanitario de La Paz y Bolivia.
+                </p>
+              </div>
+            </div>
+
+            <div className="recognitions-gallery">
+              <div className="gallery-item tall main-recognition">
+                <img src={reconocimiento1} alt="Reconocimiento Oficial SEDES La Paz al Instituto Santa Rita" />
+                <span className="badge-featured">Distinción Oficial</span>
+              </div>
+              <div className="gallery-item">
+                <img src={reconocimiento2} alt="Estudiantes del Instituto Santa Rita asistiendo a la ceremonia" />
+              </div>
+              <div className="gallery-item delivery-photo">
+                <img src={reconocimiento4} alt="Entrega del reconocimiento oficial a las autoridades académicas" />
+              </div>
+              <div className="gallery-item wide">
+                <img src={reconocimiento3} alt="Autoridades del Gobierno Autónomo Departamental y representantes del Instituto" />
+              </div>
+            </div>
           </div>
         </motion.section>
 
