@@ -160,7 +160,7 @@ export default function App() {
             </article>
           </div>
           <div className="image-stack">
-            <img src={aboutStudentsImage} alt="Estudiantes de enfermería del Instituto Santa Rita en sala de práctica clínica" />
+            <img src={aboutStudentsImage} alt="Estudiantes de enfermería del Instituto Santa Rita en sala de práctica clínica" loading="lazy" decoding="async" />
             <div className="stat-card">
               <strong>25+</strong>
               <span>Años educando</span>
@@ -231,10 +231,10 @@ export default function App() {
             <p>Ambientes modernos equipados para la enseñanza médica.</p>
           </div>
           <div className="gallery">
-            <img className="tall" src={instalacionSalaPractica} alt="Sala de práctica clínica con estudiantes de enfermería" />
-            <img src={instalacionAulaAnatomia} alt="Clase de anatomía con estudiantes del Instituto Santa Rita" />
-            <img src={instalacionConsultaExterna} alt="Ambiente de consulta externa para prácticas de enfermería" />
-            <img className="wide gallery-contain" src={instalacionEvaluacion} alt="Evaluación académica con estudiantes del Instituto Santa Rita" />
+            <img className="tall" src={instalacionSalaPractica} alt="Sala de práctica clínica con estudiantes de enfermería" loading="lazy" decoding="async" />
+            <img src={instalacionAulaAnatomia} alt="Clase de anatomía con estudiantes del Instituto Santa Rita" loading="lazy" decoding="async" />
+            <img src={instalacionConsultaExterna} alt="Ambiente de consulta externa para prácticas de enfermería" loading="lazy" decoding="async" />
+            <img className="wide gallery-contain" src={instalacionEvaluacion} alt="Evaluación académica con estudiantes del Instituto Santa Rita" loading="lazy" decoding="async" />
           </div>
         </motion.section>
 
@@ -312,17 +312,17 @@ export default function App() {
 
             <div className="recognitions-gallery">
               <div className="gallery-item tall main-recognition">
-                <img src={reconocimiento1} alt="Reconocimiento Oficial SEDES La Paz al Instituto Santa Rita" />
+                <img src={reconocimiento1} alt="Reconocimiento Oficial SEDES La Paz al Instituto Santa Rita" loading="lazy" decoding="async" />
                 <span className="badge-featured">Distinción Oficial</span>
               </div>
               <div className="gallery-item">
-                <img src={reconocimiento2} alt="Estudiantes del Instituto Santa Rita asistiendo a la ceremonia" />
+                <img src={reconocimiento2} alt="Estudiantes del Instituto Santa Rita asistiendo a la ceremonia" loading="lazy" decoding="async" />
               </div>
               <div className="gallery-item delivery-photo">
-                <img src={reconocimiento4} alt="Entrega del reconocimiento oficial a las autoridades académicas" />
+                <img src={reconocimiento4} alt="Entrega del reconocimiento oficial a las autoridades académicas" loading="lazy" decoding="async" />
               </div>
               <div className="gallery-item wide">
-                <img src={reconocimiento3} alt="Autoridades del Gobierno Autónomo Departamental y representantes del Instituto" />
+                <img src={reconocimiento3} alt="Autoridades del Gobierno Autónomo Departamental y representantes del Instituto" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>

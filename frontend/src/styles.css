@@ -2340,3 +2340,41 @@ th { color: #40506a; background: #f7fafc; }
   }
 }
 
+/* ==========================================================================
+   WEB PERFORMANCE & GPU ACCELERATION OPTIMIZATIONS
+   ========================================================================== */
+/* Hardware Acceleration layers (GPU) using will-change */
+.btn,
+.tubelight-link,
+.gallery-item img,
+.gallery img,
+.secondary-image-card img,
+.convenios-carousel-btn,
+.testimonial-grid article {
+  will-change: transform;
+}
+
+/* Micro-interactions & physical touch feedback (:active states) */
+.btn:active {
+  transform: translateY(-1px) scale(0.97) !important;
+}
+
+.tubelight-link:active {
+  transform: scale(0.96) !important;
+}
+
+.testimonial-grid article:active {
+  transform: scale(0.99) !important;
+  transition: transform 0.15s ease;
+}
+
+/* Prevent layout shifts (CLS) on image zoom/hover frames */
+.gallery-item,
+.gallery img,
+.secondary-image-card {
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0); /* Hardware accelerated fallback */
+}
+
