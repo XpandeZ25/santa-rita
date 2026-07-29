@@ -2343,14 +2343,14 @@ th { color: #40506a; background: #f7fafc; }
 /* ==========================================================================
    WEB PERFORMANCE & GPU ACCELERATION OPTIMIZATIONS
    ========================================================================== */
-/* Hardware Acceleration layers (GPU) using will-change */
-.btn,
-.tubelight-link,
-.gallery-item img,
-.gallery img,
-.secondary-image-card img,
-.convenios-carousel-btn,
-.testimonial-grid article {
+/* Optimize GPU memory consumption: only promote to Compositor Layer on active hover/focus */
+.btn:hover,
+.tubelight-link:hover,
+.gallery-item:hover img,
+.gallery:hover img,
+.secondary-image-card:hover img,
+.convenios-carousel-btn:hover,
+.testimonial-grid article:hover {
   will-change: transform;
 }
 
@@ -2376,5 +2376,13 @@ th { color: #40506a; background: #f7fafc; }
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform: translateZ(0); /* Hardware accelerated fallback */
+}
+
+/* CPU & Rendering Optimization: skip rendering of far off-screen elements */
+.support, 
+.enrollment, 
+.final-video {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 700px; /* Provides layout placeholder size to avoid scrollbar jumps */
 }
 
