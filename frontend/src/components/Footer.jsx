@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="footer-contact-block">
             <h3>Nuestra Dirección</h3>
             <p><strong>Teléfonos:</strong> 23112062 - 2334302 - 72004647 - 64155020</p>
-            <p><strong>Correo:</strong> info@santarita.edu.bo</p>
+            <p><strong>Correo:</strong> institutosantaritasrl2020@gmail.com</p>
             <p><strong>Dirección:</strong> Av. Villazón N° 1970, Edif. Roman, 1er. y 2do. Piso (Frente UMSA)</p>
           </div>
 

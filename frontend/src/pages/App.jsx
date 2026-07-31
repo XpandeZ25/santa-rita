@@ -17,9 +17,9 @@ import santaRitaVideo from "../assets/santa-rita-video.mp4";
 import ImagenSistema from "../components/ImagenSistema.jsx";
 import CarruselConvenios from "../components/CarruselConvenios.jsx";
 import reconocimiento1 from "../assets/reconocimiento-1.jpg";
-import reconocimiento2 from "../assets/reconocimiento-2.jpg";
-import reconocimiento3 from "../assets/reconocimiento-3.jpg";
-import reconocimiento4 from "../assets/reconocimiento-4.jpg";
+import reconocimiento5 from "../assets/reconocimiento-5.jpg";
+import reconocimiento6 from "../assets/reconocimiento-6.jpg";
+import reconocimiento7 from "../assets/reconocimiento-7.jpg";
 import { GradientBackground } from "../components/ui/gradient-backgrounds.jsx";
 import ScrollExpandMedia from "../components/ui/scroll-expansion-hero.jsx";
 
@@ -316,13 +316,13 @@ export default function App() {
                 <span className="badge-featured">Distinción Oficial</span>
               </div>
               <div className="gallery-item">
-                <img src={reconocimiento2} alt="Estudiantes del Instituto Santa Rita asistiendo a la ceremonia" loading="lazy" decoding="async" />
+                <img src={reconocimiento5} alt="Autoridades del SEDES La Paz entregando el reconocimiento" loading="lazy" decoding="async" />
               </div>
-              <div className="gallery-item delivery-photo">
-                <img src={reconocimiento4} alt="Entrega del reconocimiento oficial a las autoridades académicas" loading="lazy" decoding="async" />
+              <div className="gallery-item">
+                <img src={reconocimiento6} alt="Reconocimiento oficial a las autoridades académicas" loading="lazy" decoding="async" />
               </div>
               <div className="gallery-item wide">
-                <img src={reconocimiento3} alt="Autoridades del Gobierno Autónomo Departamental y representantes del Instituto" loading="lazy" decoding="async" />
+                <img src={reconocimiento7} alt="Grupo de autoridades académicas y de salud de La Paz" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
