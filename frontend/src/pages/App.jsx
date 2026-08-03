@@ -7,6 +7,7 @@ import Footer from "../components/Footer.jsx";
 import MallaCurricular from "../components/MallaCurricular.jsx";
 import heroImage from "../assets/hero-enfermeria-uniformes-verde.webp";
 import aboutStudentsImage from "../assets/estudiantes-santa-rita.png";
+import buildingImage from "../assets/edificio-santa-rita.jpg";
 import auditorioImage from "../assets/auditorio-salud.webp";
 import instalacionAulaAnatomia from "../assets/instalacion-aula-anatomia.png";
 import instalacionConsultaExterna from "../assets/instalacion-consulta-externa.png";
@@ -189,9 +190,10 @@ export default function App() {
             </article>
           </div>
           <div className="image-stack">
-            <img src={aboutStudentsImage} alt="Estudiantes de enfermería del Instituto Santa Rita en sala de práctica clínica" loading="lazy" decoding="async" />
+            <img src={aboutStudentsImage} className="main-img" alt="Estudiantes de enfermería del Instituto Santa Rita en sala de práctica clínica" loading="lazy" decoding="async" />
+            <img src={buildingImage} className="secondary-img" alt="Edificio del Instituto Técnico en Salud Santa Rita" loading="lazy" decoding="async" />
             <div className="stat-card">
-              <strong>25+</strong>
+              <strong>+25</strong>
               <span>Años educando</span>
             </div>
           </div>

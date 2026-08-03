@@ -612,23 +612,54 @@ main > :not(.page-background-only) {
   white-space: nowrap;
 }
 
-.image-stack { position: relative; min-height: 370px; }
-.image-stack img, .wide-photo, .gallery img {
+.image-stack {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  min-height: auto;
+}
+.image-stack img {
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+.image-stack .main-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+.image-stack .secondary-img {
+  width: 85%;
+  max-width: 320px;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  border: 6px solid var(--white);
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: block;
+}
+.image-stack .secondary-img:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+.wide-photo, .gallery img {
   width: 100%;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: var(--shadow);
 }
-.image-stack img { height: 330px; margin-top: 30px; }
 .stat-card {
   position: absolute;
   left: -26px;
-  bottom: 18px;
+  top: 240px;
   width: 160px;
   padding: 28px 24px;
   background: var(--white);
-  border-radius: 8px;
-  box-shadow: var(--shadow);
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  z-index: 3;
+  border-left: 4px solid var(--teal);
 }
 .stat-card strong { display: block; color: var(--teal); font-size: 36px; line-height: 1; }
 .stat-card span {
@@ -1987,9 +2018,12 @@ th { color: #40506a; background: #f7fafc; }
     min-height: auto;
     padding: 22px;
   }
-  .image-stack { min-height: 300px; }
-  .image-stack img, .wide-photo { height: 250px; }
-  .stat-card { left: 16px; bottom: -16px; }
+  .image-stack { min-height: auto; margin-top: 24px; gap: 24px; }
+  .image-stack .main-img { width: 100%; height: 240px; object-fit: cover; }
+  .image-stack .secondary-img { width: 80%; max-width: 260px; height: auto; border-width: 4px; margin: 0 auto; }
+  .wide-photo { height: 250px; }
+  .stat-card { left: 16px; top: 170px; padding: 18px 16px; width: 130px; z-index: 3; }
+  .stat-card strong { font-size: 28px; }
   .quick-replies, .dashboard-head { flex-wrap: wrap; }
   .support-visual {
     grid-template-columns: 1fr;
