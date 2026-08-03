@@ -927,25 +927,23 @@ main > :not(.page-background-only) {
 .rita-portrait {
   align-self: center;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  min-height: 430px;
+  height: 380px;
   overflow: hidden;
   border-radius: 8px;
-  background:
-    linear-gradient(180deg, rgba(237, 248, 251, 0.72) 0%, rgba(237, 248, 251, 0.86) 42%, rgba(245, 240, 251, 0.92) 100%);
+  background: var(--white);
   border: 1px solid rgba(0, 121, 140, 0.16);
   box-shadow: 0 24px 54px rgba(17, 31, 56, 0.13);
   backdrop-filter: blur(10px);
 }
 
 .rita-portrait img {
-  width: min(360px, 115%);
-  max-height: 455px;
+  width: auto;
+  height: 100%;
   object-fit: contain;
-  object-position: bottom center;
-  margin-bottom: -10px;
-  mix-blend-mode: multiply;
+  object-position: center;
+  display: block;
 }
 
 .chat-card, .lead-form, .form-promo {
@@ -1138,8 +1136,14 @@ main > :not(.page-background-only) {
 }
 
 .social-link.facebook { background: #4267b2; }
-.social-link.youtube { background: #cc2c16; }
-.social-link.instagram { background: #5b89a9; }
+.social-link.tiktok { background: #010101; }
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  display: block;
+}
 
 .footer-mini-nav {
   display: grid;
@@ -1168,6 +1172,8 @@ main > :not(.page-background-only) {
 }
 
 .map-card iframe {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   border: 0;
@@ -1784,10 +1790,12 @@ th { color: #40506a; background: #f7fafc; }
     justify-self: center;
   }
   .rita-portrait {
-    min-height: 380px;
+    height: 340px;
   }
   .rita-portrait img {
-    max-height: 410px;
+    width: auto;
+    height: 100%;
+    object-fit: contain;
   }
   .dashboard-sidebar {
     position: relative;
@@ -1990,11 +1998,12 @@ th { color: #40506a; background: #f7fafc; }
     width: min(88vw, 330px);
   }
   .rita-portrait {
-    min-height: 310px;
+    height: 280px;
   }
   .rita-portrait img {
-    max-height: 345px;
-    width: min(310px, 100%);
+    width: auto;
+    height: 100%;
+    object-fit: contain;
   }
   .footer-bottom {
     align-items: flex-start;
@@ -2385,4 +2394,367 @@ th { color: #40506a; background: #f7fafc; }
   content-visibility: auto;
   contain-intrinsic-size: 1px 700px; /* Provides layout placeholder size to avoid scrollbar jumps */
 }
+
+/* Floating Virtual Assistant Button on Left (Turquoise/Teal scheme matching logo) */
+.chat-float-btn {
+  position: fixed;
+  left: 24px;
+  bottom: 24px;
+  z-index: 85;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 18px 10px 12px;
+  background: rgba(0, 95, 113, 0.94); /* Deep Turquoise (Teal Dark) matching the logo/brand */
+  border: 2.5px solid var(--cyan); /* Bright Turquoise Cyan border */
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 95, 113, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--white);
+  cursor: pointer;
+  outline: none;
+  font-family: "Inter", Arial, sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  animation: pulse-teal-glow 2.5s infinite ease-in-out;
+}
+
+.chat-float-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  background: rgba(0, 95, 113, 0.98);
+  box-shadow: 0 15px 35px rgba(0, 95, 113, 0.45);
+}
+
+.chat-float-btn:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.chat-icon-circle {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.chat-icon-circle svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--white); /* White icon for clean contrast */
+  opacity: 0.95;
+  animation: pulse-chat-icon 2s infinite ease-in-out;
+}
+
+.chat-icon-circle .active-dot {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 10px;
+  height: 10px;
+  background: #25d366;
+  border-radius: 50%;
+  border: 1.5px solid var(--teal-dark);
+  box-shadow: 0 0 8px #25d366;
+  animation: blink-active-dot-left 1.5s infinite;
+}
+
+.chat-text-block {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.chat-text-block .title-text {
+  font-size: 13px;
+  font-weight: 800;
+  color: #e6f9fa; /* Light Turquoise Cyan text */
+  letter-spacing: 0.5px;
+}
+
+.chat-text-block .sub-text {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Floating Chat Drawer/Window */
+.floating-chat-container {
+  position: fixed;
+  left: 24px;
+  bottom: 90px;
+  width: 360px;
+  max-width: calc(100vw - 48px);
+  z-index: 95;
+  animation: chat-slide-up 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.floating-chat-card {
+  border: 1.5px solid var(--teal-dark);
+  box-shadow: 0 20px 50px rgba(7, 13, 84, 0.28);
+  border-radius: 12px;
+}
+
+.floating-chat-card .chat-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.floating-chat-card .chat-head > div:nth-child(2) {
+  flex-grow: 1;
+}
+
+.floating-chat-card .close-chat-btn {
+  background: transparent;
+  border: 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 26px;
+  font-weight: 300;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 1;
+  transition: background-color 0.2s, color 0.2s;
+  padding: 0;
+  margin-left: 10px;
+}
+
+.floating-chat-card .close-chat-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--white);
+}
+
+/* Animations */
+@keyframes pulse-teal-glow {
+  0% {
+    box-shadow: 0 10px 30px rgba(7, 13, 84, 0.25), 0 0 0 0 rgba(16, 190, 210, 0.45);
+  }
+  50% {
+    box-shadow: 0 10px 30px rgba(7, 13, 84, 0.25), 0 0 0 12px rgba(16, 190, 210, 0);
+  }
+  100% {
+    box-shadow: 0 10px 30px rgba(7, 13, 84, 0.25), 0 0 0 0 rgba(16, 190, 210, 0);
+  }
+}
+
+@keyframes pulse-chat-icon {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.94);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(0.94);
+  }
+}
+
+@keyframes blink-active-dot-left {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+@keyframes chat-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Responsive adjust */
+@media (max-width: 768px) {
+  .chat-float-btn {
+    left: 16px;
+    bottom: 84px; /* Stack cleanly above bottom mobile nav menu */
+    padding: 8px 14px 8px 10px;
+  }
+  .floating-chat-container {
+    left: 16px;
+    bottom: 146px; /* Stack above the button on mobile */
+    max-width: calc(100vw - 32px);
+  }
+  .chat-text-block .title-text {
+    font-size: 11px;
+  }
+  .chat-text-block .sub-text {
+    font-size: 9px;
+  }
+  .chat-icon-circle {
+    width: 32px;
+    height: 32px;
+  }
+  .chat-icon-circle svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Brand Hero Banner Section (below cover) */
+.brand-hero-banner {
+  padding: 60px 20px;
+  background-color: #0d2f32; /* Dark Green-Teal matching the hero cover background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 4px solid var(--cyan); /* Cyan border accent */
+}
+
+.banner-content {
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.banner-logo {
+  height: 280px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
+  margin-bottom: 16px;
+}
+
+.banner-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.banner-subtitle {
+  font-size: 46px;
+  font-weight: 900;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  line-height: 1.15;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.banner-slogan {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 10px 0 0 0;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive styles for the banner */
+.banner-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.metric-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(16, 190, 210, 0.5);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.metric-number {
+  font-size: 40px;
+  font-weight: 800;
+  color: #ffd700; /* Gold/yellow number color */
+  line-height: 1;
+}
+
+.metric-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.5px;
+}
+
+.metric-desc {
+  font-size: 11px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .brand-hero-banner {
+    padding: 40px 16px;
+  }
+  .banner-logo {
+    height: 160px;
+  }
+  .banner-title {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+  .banner-subtitle {
+    font-size: 30px;
+    letter-spacing: 0.5px;
+  }
+  .banner-slogan {
+    font-size: 15px;
+  }
+  .banner-metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .metric-card {
+    padding: 20px 16px;
+  }
+  .metric-number {
+    font-size: 32px;
+  }
+  .metric-title {
+    font-size: 11px;
+  }
+  .metric-desc {
+    font-size: 10px;
+  }
+}
+
 

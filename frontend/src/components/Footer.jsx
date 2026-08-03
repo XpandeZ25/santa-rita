@@ -21,9 +21,28 @@ export default function Footer() {
           <div className="footer-social-block">
             <h3>Siguenos</h3>
             <div className="social-links">
-              <a className="social-link facebook" href="https://www.facebook.com/profile.php?id=61590827580630&rdid=sSV6PCP3XyhEwFFX&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14jDqKmHvxJ%2F" target="_blank" rel="noreferrer" aria-label="Facebook">f</a>
-              <a className="social-link youtube" href="https://www.youtube.com/" target="_blank" rel="noreferrer" aria-label="YouTube">▶</a>
-              <a className="social-link instagram" href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram">◎</a>
+              <a
+                className="social-link facebook"
+                href="https://www.facebook.com/profile.php?id=61590827580630&rdid=sSV6PCP3XyhEwFFX&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14jDqKmHvxJ%2F"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/>
+                </svg>
+              </a>
+              <a
+                className="social-link tiktok"
+                href="https://www.tiktok.com/@instituto.santa.rita"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="TikTok"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.06-2.89-.52-4.06-1.39-.77-.57-1.39-1.35-1.77-2.24-.04 1.93.01 3.86-.02 5.79-.04 2.12-.47 4.28-1.7 5.99-1.43 1.95-3.83 3.04-6.26 2.92-2.83-.09-5.46-1.93-6.43-4.59-.97-2.63-.44-5.75 1.39-7.85 1.63-1.92 4.27-2.73 6.72-2.12v4.19c-1.22-.38-2.61-.17-3.62.63-.99.76-1.4 2.13-1.07 3.34.3 1.19 1.45 2.06 2.68 2.03 1.25-.01 2.37-.87 2.69-2.08.13-1.79.03-3.59.06-5.39.02-4.34.01-8.68.02-13.02z"/>
+                </svg>
+              </a>
             </div>
             <nav className="footer-mini-nav" aria-label="Enlaces del footer">
               <a href="/#nosotros">Sobre Nosotros</a>

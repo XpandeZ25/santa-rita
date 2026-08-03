@@ -22,6 +22,7 @@ import reconocimiento6 from "../assets/reconocimiento-6.jpg";
 import reconocimiento7 from "../assets/reconocimiento-7.jpg";
 import { GradientBackground } from "../components/ui/gradient-backgrounds.jsx";
 import ScrollExpandMedia from "../components/ui/scroll-expansion-hero.jsx";
+import logo from "../assets/logo-santa-rita.webp";
 
 const entranceVariants = {
   hidden: { opacity: 0, y: 44 },
@@ -45,6 +46,7 @@ export default function App() {
     "¡Hola! Soy Rita. ¿Tienes alguna duda sobre nuestra carrera de Enfermería? Haz clic en una opción o escríbeme."
   ]);
   const [chatInput, setChatInput] = useState("");
+  const [isChatOpen, setIsChatOpen] = useState(false);
 
   const getAssistantReply = (message) => {
     const normalized = message.toLowerCase();
@@ -120,8 +122,6 @@ export default function App() {
           mediaSrc={heroImage}
           bgImageSrc={heroImage}
           title={'INSTITUTO TECNICO EN SALUD "SANTA RITA" S.R.L.'}
-          date="Instituto Santa Rita"
-          scrollToExpand="Desliza para descubrir la carrera"
           className="santa-intro"
         >
           <div className="intro-copy">
@@ -132,6 +132,35 @@ export default function App() {
             </div>
           </div>
         </ScrollExpandMedia>
+
+        {/* Santa Rita Slogan/Brand Banner (Customized like Señor de Mayo banner) */}
+        <section className="brand-hero-banner">
+          <div className="banner-content">
+            <img src={logo} className="banner-logo" alt="Logo Instituto Santa Rita" />
+            <h2 className="banner-title">INSTITUTO TECNICO EN SALUD</h2>
+            <h1 className="banner-subtitle">"SANTA RITA" S.R.L.</h1>
+            <p className="banner-slogan">Formando profesionales en salud con excelencia y vocación.</p>
+            
+            {/* Metric Cards Section */}
+            <div className="banner-metrics-grid">
+              <div className="metric-card">
+                <span className="metric-number">+25</span>
+                <span className="metric-title">AÑOS DE TRAYECTORIA</span>
+                <span className="metric-desc">Formando profesionales en salud desde 1998</span>
+              </div>
+              <div className="metric-card">
+                <span className="metric-number">+10</span>
+                <span className="metric-title">CONVENIOS DE SALUD</span>
+                <span className="metric-desc">Prácticas en hospitales de 1er, 2do y 3er nivel</span>
+              </div>
+              <div className="metric-card">
+                <span className="metric-number">100%</span>
+                <span className="metric-title">ACREDITACIÓN MINISTERIAL</span>
+                <span className="metric-desc">Resolución Ministerial R.M. 0880/2023 (09/10/2023)</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <motion.section className="section split" id="nosotros" {...entranceProps}>
           <div className="copy-block">
@@ -219,7 +248,7 @@ export default function App() {
             <p>Cumplimos con todos los estándares nacionales para tu formación profesional.</p>
             <div className="legal-grid">
               <article><span className="line-icon">✓</span><h3>Ministerio de Educación</h3><p>Instituto legalmente reconocido por el Estado Plurinacional de Bolivia.</p></article>
-              <article><span className="line-icon">§</span><h3>Resolución Ministerial</h3><p>R.M. N° 290/1999. Asegurando excelencia académica y legal.</p></article>
+              <article><span className="line-icon">§</span><h3>Resolución Ministerial</h3><p>R.M. 0880/2023 (09/10/2023). Asegurando excelencia académica y legal.</p></article>
               <article><span className="line-icon">▣</span><h3>Títulos Oficiales</h3><p>Validez nacional para el ejercicio profesional inmediato.</p></article>
             </div>
           </div>
@@ -294,18 +323,18 @@ export default function App() {
             <div className="recognitions-intro">
               <div className="recognitions-intro-main">
                 <p className="highlight-lead">
-                  El Instituto Santa Rita ha sido distinguido con un reconocimiento oficial otorgado por el Gobierno Autónomo Departamental de La Paz, a través del Servicio Departamental de Salud (SEDES) y la Secretaría Departamental de Salud, por su alto profesionalismo y su invaluable aporte al Programa Departamental de Lucha contra el Cáncer.
+                  El INSTITUTO TECNICO EN SALUD "SANTA RITA" S.R.L. ha sido distinguido con un reconocimiento oficial otorgado por el Gobierno Autónomo Departamental de La Paz, a través del Servicio Departamental de Salud (SEDES) y la Secretaría Departamental de Salud, por su alto profesionalismo y su invaluable aporte al Programa Departamental de Lucha contra el Cáncer.
                 </p>
                 <p className="highlight-quote">
-                  El Instituto Santa Rita reafirma su misión de formar profesionales íntegros, comprometidos con el bienestar de la comunidad y con la construcción de un futuro más saludable para todos.
+                  El INSTITUTO TECNICO EN SALUD "SANTA RITA" S.R.L. reafirma su misión de formar profesionales íntegros, comprometidos con el bienestar de la comunidad y con la construcción de un futuro más saludable para todos.
                 </p>
               </div>
               <div className="recognitions-intro-side">
                 <p>
-                  Este reconocimiento resalta el compromiso del Instituto con la mejora de la calidad de vida de los pacientes, su humanidad y su dedicación constante al fortalecimiento del sistema de salud en el departamento.
+                  Este reconocimiento resalta el compromiso del INSTITUTO TECNICO EN SALUD "SANTA RITA" S.R.L. con la mejora de la calidad de vida de los pacientes, su humanidad y su dedicación constante al fortalecimiento del sistema de salud en el departamento.
                 </p>
                 <p>
-                  Durante la ceremonia, las autoridades destacaron la labor del Instituto Santa Rita como ejemplo de excelencia académica, ética profesional y responsabilidad social, pilares que contribuyen al desarrollo humano y sanitario de La Paz y Bolivia.
+                  Durante la ceremonia, las autoridades destacaron la labor del INSTITUTO TECNICO EN SALUD "SANTA RITA" S.R.L. como ejemplo de excelencia académica, ética profesional y responsabilidad social, pilares que contribuyen al desarrollo humano y sanitario de La Paz y Bolivia.
                 </p>
               </div>
             </div>
@@ -404,6 +433,75 @@ export default function App() {
         </motion.section>
       </main>
       <Footer />
+
+      {/* Floating Chat Button (Bottom Left) */}
+      <button
+        type="button"
+        className={`chat-float-btn ${isChatOpen ? "active" : ""}`}
+        onClick={() => setIsChatOpen(!isChatOpen)}
+        aria-label="Abrir asistente virtual"
+      >
+        <div className="chat-icon-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span className="active-dot"></span>
+        </div>
+        <div className="chat-text-block">
+          <span className="title-text">¿NECESITAS AYUDA?</span>
+          <span className="sub-text">Asistente Virtual IA</span>
+        </div>
+      </button>
+
+      {/* Floating Chat Drawer/Window (Bottom Left) */}
+      {isChatOpen && (
+        <div className="floating-chat-container">
+          <div className="chat-card floating-chat-card">
+            <div className="chat-head">
+              <div className="avatar">R</div>
+              <div>
+                <strong>Rita - Asesora Académica</strong>
+                <span>En línea ahora</span>
+              </div>
+              <button
+                type="button"
+                className="close-chat-btn"
+                onClick={() => setIsChatOpen(false)}
+                aria-label="Cerrar chat"
+              >
+                &times;
+              </button>
+            </div>
+            <div className="chat-body">
+              {chatMessages.map((message, index) => (
+                <div className={message.startsWith("Tú:") ? "message user-message" : "message"} key={`${message}-${index}`}>
+                  {message}
+                </div>
+              ))}
+            </div>
+            <div className="quick-replies">
+              <button onClick={() => sendChatMessage("Costos")} type="button">Costos</button>
+              <button onClick={() => sendChatMessage("Requisitos")} type="button">Requisitos</button>
+              <button onClick={() => sendChatMessage("Prácticas")} type="button">Prácticas</button>
+            </div>
+            <form
+              className="chat-form"
+              onSubmit={(event) => {
+                event.preventDefault();
+                sendChatMessage(chatInput);
+              }}
+            >
+              <input
+                value={chatInput}
+                onChange={(event) => setChatInput(event.target.value)}
+                type="text"
+                placeholder="Escribe tu mensaje..."
+              />
+              <button type="submit" aria-label="Enviar">›</button>
+            </form>
+          </div>
+        </div>
+      )}
     </>
   );
 }
